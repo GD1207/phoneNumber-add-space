@@ -21,6 +21,7 @@
 		4EAD02EB193731F30013E820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAD02CD193731F20013E820 /* UIKit.framework */; };
 		4EAD02F3193731F30013E820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD02F1193731F30013E820 /* InfoPlist.strings */; };
 		4EAD02F5193731F30013E820 /* GYBankCardFormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD02F4193731F30013E820 /* GYBankCardFormatTests.m */; };
+		4EAD03011937321C0013E820 /* GYBankCardFormatTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD03001937321C0013E820 /* GYBankCardFormatTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		4EAD02F0193731F30013E820 /* GYBankCardFormatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GYBankCardFormatTests-Info.plist"; sourceTree = "<group>"; };
 		4EAD02F2193731F30013E820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EAD02F4193731F30013E820 /* GYBankCardFormatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYBankCardFormatTests.m; sourceTree = "<group>"; };
+		4EAD02FF1937321C0013E820 /* GYBankCardFormatTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYBankCardFormatTextField.h; sourceTree = "<group>"; };
+		4EAD03001937321C0013E820 /* GYBankCardFormatTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYBankCardFormatTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		4EAD02CF193731F20013E820 /* GYBankCardFormat */ = {
 			isa = PBXGroup;
 			children = (
+				4EAD02FE1937321C0013E820 /* GYBankCardFormat */,
 				4EAD02D8193731F20013E820 /* AppDelegate.h */,
 				4EAD02D9193731F20013E820 /* AppDelegate.m */,
 				4EAD02DB193731F20013E820 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				4EAD02F1193731F30013E820 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EAD02FE1937321C0013E820 /* GYBankCardFormat */ = {
+			isa = PBXGroup;
+			children = (
+				4EAD02FF1937321C0013E820 /* GYBankCardFormatTextField.h */,
+				4EAD03001937321C0013E820 /* GYBankCardFormatTextField.m */,
+			);
+			path = GYBankCardFormat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +209,12 @@
 		4EAD02BE193731F20013E820 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "蒲晓涛";
 				TargetAttributes = {
+					4EAD02C5193731F20013E820 = {
+						DevelopmentTeam = 85753DZ5FY;
+					};
 					4EAD02E6193731F30013E820 = {
 						TestTargetID = 4EAD02C5193731F20013E820;
 					};
@@ -251,6 +267,7 @@
 			files = (
 				4EAD02E0193731F20013E820 /* ViewController.m in Sources */,
 				4EAD02DA193731F20013E820 /* AppDelegate.m in Sources */,
+				4EAD03011937321C0013E820 /* GYBankCardFormatTextField.m in Sources */,
 				4EAD02D6193731F20013E820 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +336,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -376,9 +394,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYBankCardFormat/GYBankCardFormat-Prefix.pch";
 				INFOPLIST_FILE = "GYBankCardFormat/GYBankCardFormat-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jucaicp.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,9 +409,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYBankCardFormat/GYBankCardFormat-Prefix.pch";
 				INFOPLIST_FILE = "GYBankCardFormat/GYBankCardFormat-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jucaicp.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -413,6 +435,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "GYBankCardFormatTests/GYBankCardFormatTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jucaicp.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -431,6 +454,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYBankCardFormat/GYBankCardFormat-Prefix.pch";
 				INFOPLIST_FILE = "GYBankCardFormatTests/GYBankCardFormatTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jucaicp.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -456,6 +480,7 @@
 				4EAD02FA193731F30013E820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EAD02FB193731F30013E820 /* Build configuration list for PBXNativeTarget "GYBankCardFormatTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +489,7 @@
 				4EAD02FD193731F30013E820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
